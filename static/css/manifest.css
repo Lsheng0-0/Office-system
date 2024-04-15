@@ -1,0 +1,109 @@
+.custom-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #3498db; /* 标题颜色 */
+}
+
+.nav-link {
+    cursor: pointer;
+}
+
+.subjectItem {
+    border: 0; /* 区块边框 */
+    background-color: #fff; /* 区块背景色 */
+    border-radius: 8px; /* 区块圆角 */
+    margin-top: 20px;
+    padding: 23px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 区块阴影 */
+}
+
+.subjectItem-left {
+    flex: 1;
+}
+
+.subjectItem-right {
+    display: flex;
+    align-items: center;
+}
+
+.title {
+    font-family: "微软雅黑,宋体,黑体,Arial", sans-serif;
+    color: #333;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 37px;
+    font-style: normal;
+}
+
+.description {
+    margin-top: 10px;
+    color: #666;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.info {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #3295dc;
+}
+
+.info span {
+    margin-right: 10px;
+}
+
+.work-list {
+    display: none;
+}
+
+.active-list {
+    display: block;
+}
+.nav-tabs-custom {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-tabs-custom li {
+    display: inline-block;
+    margin-right: 10px; /* 适当调整间距 */
+}
+
+.nav-tabs-custom a {
+    text-decoration: none;
+    color: #42a0ff; /* 设置链接颜色 */
+    font-size: 14px;
+}
+
+#fileInput {
+    display: none;
+}
+.upload-button {
+    display: block;
+    width: 200px;
+    margin: 28px auto 0;
+    padding: 12px;
+    background-color: #ffffff;
+    color: #000000;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.file-item {
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+.file-name {
+    margin: 0;
+}
+.file-remove {
+    color: #f00;
+    cursor: pointer;
+}
+.file-remove:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block title %}
+        <title>{{ site_title }}</title>
+    {% endblock %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/admin/simpleui-x/elementui/theme-chalk/index.css">
+    <link rel="stylesheet" href="/static/admin/simpleui-x/css/login.css?_=2.1">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="icon" href="/static/image/logo.png" type="image/x-icon">
+     <!-- 引入 Font Awesome 样式 -->
+    {#  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">#}
+    <link rel="stylesheet" type="text/css" href="/static/admin/simpleui-x/fontawesome-free-6.2.0-web/css/all.min.css">
+    <style>
+    .bg {
+        min-height: 100%;
+        background: #f0f2f5 url('/static/admin/simpleui-x/img/bg.svg') no-repeat 50%;
+        background-size: 100%;
+        padding: 20px 0;
+        position: relative;
+    }
+    body {
+      font-family: "微软雅黑",sans-serif; /* 替换为你的中文字体 */
+      margin: 0;
+      padding: 0;
+    }
+    nav {
+        background-image: url('/static/img/navbar-bg.b4f50da.png') ;
+        background-color: #2f8afa;
+        color: #fff;
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .nav-left {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-left h1 {
+        font-size: 28px;
+        margin: 0 20px 0 0;
+        transition: color 0.3s ease;
+    }
+    .nav-left a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 16px;
+        padding: 10px 20px;
+        margin: 0 10px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+    .nav-left a:hover {
+        background-color: #5196fd;
+        transform: translateY(-2px);
+    }
+    .user-info {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+    }
+    .user-info span {
+        margin-right: 10px;
+    }
+    .dropdown-btn {
+        border: none;
+        font-size: 13px;
+        margin-right: 5px;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 90px;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        z-index: 1;
+        border-radius: 5px;
+        padding: 6px;
+        right: 0;
+    }
+    .dropdown-content a {
+        color: #333;
+        font-size: 12px;
+        padding: 4px 4px;
+        text-decoration: none;
+        display: block;
+        transition: background-color 0.3s ease;
+    }
+    .dropdown-content a:hover {
+        background-color: #ddd;
+    }
+    .breadcrumb {
+        border: none;
+        border-radius: 5px;
+        color: #1477f0;
+        margin: 5px;
+        font-size: 14px;
+        font-family: "微软雅黑",sans-serif; /* 替换为你的中文字体 */
+        height: 26px; /* 调整高度 */
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
+    }
+    .user-info {
+        display: flex;
+        align-items: center;
+    }
+
+    .user-info span {
+        margin-right: 10px;
+    }
+
+    .user-dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    /* 新增样式 */
+    #iframe-container {
+        width: 100%;
+        height: 88vh; /* 调整高度 */
+        {#border: 1px solid #007bff; /* 蓝色边框 */#}
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    #iframe-container iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+    .modal-dialog {
+    max-width: 1000px; /* 设置最大宽度 */
+    }
+
+    .modal-content {
+    width: 100%; /* 设置宽度为100% */
+    }
+
+    .modal-body {
+    max-height: 800px; /* 设置最大高度 */
+    overflow-y: auto; /* 滚动条显示 */
+    }
+    </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-left">
+        {% block header %}
+            <h1 style="font-style: italic;font-weight: 600;letter-spacing: 0.222em;line-height: 0;font-size: 29px;">{{ site_header }}</h1>
+        {% endblock %}
+        <a href="/index/" >首页</a>
+        <a href="/submitted/" >单位发送</a>
+        {% if permission == 1 %}
+            <a href="/receive/" >单位接收</a>
+            <a href="/form_management/" >表单管理</a>
+        {% endif %}
+    </div>
+    <div class="user-info">
+        <i class="fas fa-user"></i>
+        <span></span>
+      <div class="system-user">
+          {{ user }}
+          <div >{{ unit }}/{{ department }}</div>
+      </div>
+        <span></span>
+        <span></span>
+      <div class="user-dropdown">
+        <button class="el-button el-button--primary el-button--small dropdown-btn">用户设置</button>
+            <div class="dropdown-content">
+                <!-- 触发模态框的按钮 -->
+                <a class="btn btn-link" data-toggle="modal" data-target="#passwordModal">修改密码</a>
+                <a href="/logout/" class="btn btn-link" style="margin-left: 1px">注销登录</a>
+            </div>
+      </div>
+      </div>
+  </nav>
+{% load custom_tags %}
+  {% load i18n %}
+  <!-- 面包屑导航 -->
+  <div class="breadcrumb">
+    <ul>
+      {% breadcrumb_trail request.path as trail %}
+      {% for item in trail %}
+        <a href="{{ item.1 }}">
+            {% trans item.0 %}
+        </a>
+      {% if forloop.last %}
+          <a></a>
+          {% else %}
+          <a>/</a>
+      {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+    <!-- 新增 iframe 容器 -->
+    <div id="iframe-container">
+        <!-- 默认显示的页面，可以根据需要设置默认页面 -->
+        <iframe src="{{ jump }}" id="iframe-content"></iframe>
+    </div>
+    <!-- 模态框 -->
+    <div class="modal fade" id="passwordModal" tabindex="-1" role="dialog" aria-labelledby="passwordModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="passwordModalLabel">修改密码</h5>
+        </div>
+        <div class="modal-body">
+          <!-- 在这里嵌入密码修改页面的内容 -->
+          <iframe src="/password_changeview/" style="width: 100%; height: 500px;"></iframe>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+        </div>
+      </div>
+    </div>
+    </div>
+    <script>
+    // JavaScript 代码，用于显示/隐藏下拉菜单
+    document.addEventListener("DOMContentLoaded", function() {
+    var dropdownBtn = document.querySelector('.dropdown-btn');
+    var dropdownContent = document.querySelector('.dropdown-content');
+
+    dropdownBtn.addEventListener('click', function() {
+    dropdownContent.style.display = (dropdownContent.style.display === 'block') ? 'none' : 'block';
+    });
+    document.addEventListener('click', function(event) {
+    if (!event.target.matches('.dropdown-btn')) {
+      dropdownContent.style.display = 'none';
+    }
+    });
+    });
+    </script>
+    <!-- 引入Bootstrap和jQuery的JS文件 -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

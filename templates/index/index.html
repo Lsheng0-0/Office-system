@@ -1,0 +1,90 @@
+{% extends "admin/base_site.html" %}
+{% load i18n static %}
+{% block content %}
+  <!-- 这里是你视图的具体内容 -->
+  {% block title %}
+        <title>{{ site_title }}</title>
+  {% endblock %}
+  <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+  <style>
+    .box_list {
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    .title {
+      background-color: #8ac1ff;
+      padding: 10px;
+    }
+
+    .title h3 {
+      font-size: 18px;
+      color: #fff;
+      margin: 0;
+      cursor: pointer; /* 添加光标样式，表示可点击 */
+    }
+
+    .content {
+      padding: 10px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    td {
+      height: 40px;
+      line-height: 40px;
+      padding-left: 10px;
+    }
+
+    tr:nth-child(odd) {
+      background-color: #f8f9fa;
+    }
+
+    tr:nth-child(even) {
+      background-color: #fff;
+    }
+    /* 新增样式，每行显示五个单位 */
+    .unit-list {
+      column-count: 4;
+      column-gap: 30px; /* 间隔可根据需要调整 */
+      text-align: center; /* 让单位名称居中显示 */
+    }
+
+    .unit-list a {
+      display: block;
+      margin-bottom: 10px; /* 单位之间的间距可根据需要调整 */
+    }
+  </style>
+
+  <script src="/static/js/jquery-3.2.1.slim.min.js"></script>
+  <script src="/static/js/popper.min.js"></script>
+  <script src="/static/js/bootstrap.min.js"></script>
+    
+  {% for institution in institutions %}
+    {% if institution.is_sign == 1 %}
+    <div class="container box_list" style="margin-top: 30px">
+      <div class="title" data-toggle="collapse" data-target="#collapse{{ forloop.counter }}">
+        <h3 class="font-weight-bold text-white">{{ institution.institution }}</h3>
+      </div>
+      <div class="content" id="collapse{{ forloop.counter }}">
+        <!-- 新增的单位列表样式 -->
+        <div class="unit-list">
+          {% for organization in organizations %}
+            {% if organization.institution_id == institution.code %}
+                {% if organization.is_sign == 1 %}
+                    <a class="font-size-16" href="/index/manifest/?unitname={{ organization.name }}" target="_blank">{{ organization.name }}</a>
+                {% endif %}
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+      {% endif %}
+  {% endfor %}
+
+{% endblock %}

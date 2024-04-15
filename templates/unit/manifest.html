@@ -1,0 +1,137 @@
+{% extends "admin/base_site.html" %}
+{% block title %}
+    <title>{{ site_title }}</title>
+{% endblock %}
+{% load i18n static %}
+{% block content %}
+    <!-- 引入 Bootstrap 样式 -->
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css"><link>
+    <link rel="stylesheet" href="/static/css/manifest.css"><link>
+
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/jquery-3.7.1.min.js"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var buttons = document.querySelectorAll(".download-button");
+      buttons.forEach(function(button) {
+        button.addEventListener("click", function() {
+          var downloadLink = this.getAttribute("data-download-link");
+          // 创建一个虚拟的下载链接
+          var link = document.createElement("a");
+          link.href = downloadLink;
+          link.download = ""; // 如果需要指定下载文件的名称，可以在这里设置
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+        });
+      });
+    });
+    </script>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col">
+                <h2 class="custom-title" style="margin-bottom: 20px;">{{ organization_name }}</h2>
+            </div>
+            <ul class="nav nav-tabs list-unstyled nav-tabs-custom"  style="list-style: none;">
+                <li class="nav-item" >
+                    <a class="nav-link active" aria-current="page" onclick="showWorkList('permanent')">常设工作</a>
+                </li>
+            </ul>
+        </div>
+        {% for form in forms %}
+        <div role="tablist" aria-multiselectable="true" class="el-collapse subjectList">
+        <div class="el-collapse-item is-active">
+            <div role="tab" aria-expanded="true">
+                <!-- 常设工作列表 -->
+                <div class="work-list active-list" id="permanent-list-{{ form.code }}">
+                    {% if form.status == 1 and form.type == 0 %}
+                        <div class="subjectItem d-flex align-items-center">
+                            <div class="subjectItem-left">
+                                <div class="ellipsis">
+                                    <span class="title" style="font-size: 22px;font-weight: 500;line-height: 57px;font-style: normal;">{{ form.name }}</span>
+                                    <span class="description">{{ form.description }}</span>
+                                </div>
+                                <div class="info">
+                                    <span>办理部门&nbsp;:&nbsp;{{ organization_name }}</span>
+                                    <span>创建时间&nbsp;:&nbsp;{{ form.create_time }};</span>
+                                    <span>联系人&nbsp;:&nbsp;{{ form.create_user }}</span>
+                                </div>
+                            </div>
+                            <div class="subjectItem-right ms-auto">
+                                <el-button type="button" class="el-button el-button--primary el-button--small download-button" data-download-link="/media/{{ form.url }}">
+                                    <span>下载表单</span>
+                                </el-button>
+                                <!-- 添加一个按钮 -->
+                                <button type="button"
+                                           class="el-button el-button--primary el-button--small" size="small"
+                                           data-bs-toggle="modal"
+                                           data-bs-toggle="tooltip"
+                                           data-bs-placement="top"
+                                           {% if users.permissions %}
+                                           data-bs-target="#uploadModal-{{ form.code }}"
+                                           {% else %}
+                                           disabled  title="无上传权限"
+                                           {% endif %}>
+                                    <span>上传文件</span>
+                                </button>
+                                <!-- 弹窗模板 -->
+                                <form method="POST" action="/uploadview/?formcde={{ form.code }}" enctype="multipart/form-data" id="uploadForm-{{ form.code }}">
+                                    {% csrf_token %}
+                                    <div class="modal fade" id="uploadModal-{{ form.code }}" tabindex="-1" aria-labelledby="uploadModalLabel-{{ form.code }}" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <!-- 弹窗的内容，可以将你原来的表单放在这里 -->
+                                                <div class="modal-header">
+                                                    <h6 class="custom-title" id="uploadModalLabel-{{ form.code }}">{{ form.name }}</h6>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="container">
+                                                        <input type="hidden" name="form_code" value="{{ form.code }}">
+                                                        <input type="hidden" name="form_unit_name" value="{{ form.unit.name }}">
+                                                        <input type="file" id="fileInput-{{ form.code }}" name="file" style="display: none;" accept="image/*, .pdf, .doc, .docx, .xls, .xlsx, .ppt, .pptx, .mp4, .avi, zip, rar" multiple>
+                                                        <label for="fileInput-{{ form.code }}" class="el-button el-button--medium el-button--medium upload-button">选择文件</label>
+                                                        <ul id="uploadList-{{ form.code }}" style="margin-top: 25px;padding: 0;list-style-type: none">请选择文件上传</ul>
+                                                        <div class="overlay" id="overlay-{{ form.code }}"></div>
+                                                    </div>
+                                                </div>
+                                                <!-- 弹窗底部的关闭按钮 -->
+                                                <div class="modal-footer">
+                                                    <button type="submit" class="el-button el-button--primary el-button--small">完成</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <script>
+                                        document.getElementById('fileInput-{{ form.code }}').addEventListener('change', function(e) {
+                                            const files = Array.from(e.target.files);
+                                            const uploadList = document.getElementById('uploadList-{{ form.code }}');
+                                            uploadList.innerHTML = ''; // 清除现有列表
+                                            files.forEach(file => {
+                                                const li = document.createElement('li');
+                                                li.classList.add('file-item');
+                                                li.innerHTML = '<p class="file-name">' + file.name + '</p>' +
+                                                   '<span class="file-remove">移除</span>';
+                                                const removeButton = li.querySelector('.file-remove');
+                                                removeButton.addEventListener('click', function() {
+                                                    uploadList.removeChild(li);
+                                                });
+                                                uploadList.appendChild(li);
+                                            });
+                                        });
+                                        </script>
+                                </form>
+                            </div>
+                        </div>
+                    {% endif %}
+                </div>
+                <!-- 临时性工作列表 -->
+            </div>
+        </div>
+    </div>
+        {% endfor %}
+    </div>
+    
+
+{% endblock %}

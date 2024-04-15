@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+{% load i18n static simpletags %}
+{% get_current_language as LANGUAGE_CODE %}{% get_current_language_bidi as LANGUAGE_BIDI %}
+<html lang="{{ LANGUAGE_CODE|default:'en-us' }}" {% if LANGUAGE_BIDI %}dir="rtl" {% endif %}>
+<head>
+    {% block title %}
+        <title>{{ site_title }}</title>
+    {% endblock %}
+    {% include 'admin/includes/css-part.html' %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'admin/css/base.css' %}?_=2.7">
+    <link rel="stylesheet" type="text/css" href="{% static 'admin/simpleui-x/css/base.css' %}?_=2.7">
+    <link rel="stylesheet" type="text/css" href="{% static 'admin/simpleui-x/theme/simpleui.css' %}">
+    {% include 'admin/includes/js-part.html' %}
+    <script type="text/javascript" src="{% static 'admin/simpleui-x/js/language.js' %}?_=2.1.2"></script>
+    <script type="text/javascript" src="{% static 'admin/simpleui-x/locale/en-us.js' %}?_=2.1.2"></script>
+    <script type="text/javascript" src="{% static 'admin/simpleui-x/locale/' %}{% get_language %}.js"></script>
+    <script type="text/javascript" src="{% static 'admin/simpleui-x/js/cookie.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="/static/admin/css/changelists.css?_=20180905"/>
+    <script type="text/javascript" src="/admin/jsi18n/"></script>
+    <script type="text/javascript" src="{% static 'admin/js/vendor/jquery/jquery.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'admin/js/jquery.init.js' %}"></script>
+    <script type="text/javascript" src="{% static 'admin/js/core.js' %}"></script>
+    <script type="text/javascript" src="{% static 'admin/js/admin/RelatedObjectLookups.js' %}"></script>
+    <script type="text/javascript" src="{% static 'admin/js/actions.js' %}"></script>
+    <script type="text/javascript" src="{% static 'admin/js/urlify.js' %}"></script>
+    <script type="text/javascript" src="{% static 'admin/js/prepopulate.js' %}"></script>
+
+    <script type="text/javascript" src="{% static 'admin/js/vendor/xregexp/xregexp.js' %}"></script>
+    <script type="text/javascript" src="{% static 'admin/js/actions.js' %}"></script>
+
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    {% block responsive %}
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'admin/css/responsive.css' %}?_=20180905"/>
+    {% if LANGUAGE_BIDI %}
+    <link rel="stylesheet" type="text/css" href="{% static 'admin/css/responsive_rtl.css' %}?_=20180905"/>
+    {% endif %}
+    {% endblock %}
+    {% block bots %}
+    <meta name="robots" content="NONE,ARCHIVE"/>
+    {% endblock %}
+    <script type="text/javascript" src="{% static 'admin/js/vendor/jquery/jquery.min.js' %}"></script>
+    <script type="text/javascript" src="/static/admin/simpleui-x/automatic/dicts.js"></script>
+    <script type="text/javascript" src="/static/admin/simpleui-x/automatic/segment.js"></script>
+    <script type="text/javascript" src="/static/admin/simpleui-x/js/axios.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          var buttons = document.querySelectorAll(".download-button");
+          buttons.forEach(function(button) {
+            button.addEventListener("click", function() {
+              var downloadLink = this.getAttribute("data-download-link");
+              // 创建一个虚拟的下载链接
+              var link = document.createElement("a");
+              link.href = downloadLink;
+              link.download = ""; // 如果需要指定下载文件的名称，可以在这里设置
+              document.body.appendChild(link);
+              link.click();
+              document.body.removeChild(link);
+            });
+          });
+        });
+        </script>
+    <style>
+        #content {
+            position: relative;
+        }
+        .object-tools {
+            position: absolute;
+            top: 16px;
+            right: 20px;
+            height: 50px;
+            z-index: 2;
+        }
+        .object-tools .import_link, .object-tools .export_link {
+            color: white !important;
+        }
+        /* Reset Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Table Styles */
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        .table th,
+        .table td {
+            padding: 5px 8px;
+            border: 1px solid #ebebeb !important;
+            text-align: center;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .table th {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .table th:first-child,
+        .table td:first-child {
+            border-left: none;
+        }
+
+        .table th:last-child,
+        .table td:last-child {
+            border-right: none;
+        }
+
+        .table tr:last-child th,
+        .table tr:last-child td {
+            border-bottom: none;
+        }
+    </style>
+</head>
+{% load i18n %}
+
+<body class="{% if is_popup %}popup {% endif %}{% block bodyclass %}{% endblock %}"
+      data-admin-utc-offset="{% now ' Z' %}">
+
+{% verbatim dynamicCss %}
+{% endverbatim dynamicCss %}
+<!-- Container -->
+<div id="container">
+    {% block messages %}
+    {% autoescape off %}
+    {% load_message %}
+    {% endautoescape %}
+    <script type="text/javascript" src="{% static 'js/form/two.js'%}"></script>
+    {% endblock messages %}
+
+    <div id="content" class="flex">
+    <ul class="object-tools">
+        {% with user_ids=submit_list|join:"," %}
+        <li><a href="/submitted_export_to_excel/?submitted={{ user_ids }}" class="export_link">导出</a></li>
+        {% endwith %}
+    </ul>
+    <div id="content-main">
+        <div class="module filtered" id="changelist">
+            <script type="text/javascript">
+                function preSubmit() {
+                    $('#changelist-search').find("input[name!='']").each(function () {
+                        if ($(this).val() == '') {
+                            $(this).removeAttr('name');
+                        }
+                    });
+                }
+            </script>
+            <script type="text/javascript">var searchDates={}</script>
+            <!-- search_form.html -->
+            <div id="toolbar">
+                <form id="changelist-search" action="/submitted_filter/" method="GET" onsubmit="preSubmit(this)">
+                    {% csrf_token %}
+                    <div class="simpleui-form">
+                        <!-- DIV needed for valid HTML -->
+                        <el-input size="small" name="q" class="simpleui-form-item" filterable v-model="content__exact"
+                                  clearable placeholder="{{ query }}" value="{{ query }}">
+                        </el-input>
+                        <el-button size="small" type="primary" icon="el-icon-search" @click="formSubmit()"> 搜索</el-button>
+                    </div>
+                </form>
+            </div>
+            <script type="text/javascript"  src="{% static 'js/form/four.js'%}"></script>
+            <form id="changelist-form" method="post"  novalidate>
+                {% csrf_token %}
+                <!-- Compatible with django 3.2 x -->
+                <button style="display:none" name="index"></button>
+                <div class="actions">
+                    <input type="hidden" name="action" value=""/>
+                    <el-button size="small" data-name="import_admin_action" v-for="item in exts" :key="item.name" @click="extClick(item)">
+                        <span :class="getIcon(item.name)"></span>
+                        <span v-text="item.name"></span>
+                    </el-button>
+                    <el-button-group size="small" class="btn-group">
+                        <a href="javascript:;" @click="searchDisplay()" class="el-button el-button--default el-button--small">
+                            <span class="el-icon-search"></span></a>
+                        <a href="/submittedview/" @click="reload()" class="el-button el-button--default el-button--small">
+                            <span class="el-icon-refresh"></span></a>
+                        <a href="javascript:;" @click="openNewPage()" class="el-button el-button--default el-button--small">
+                            <span class="el-icon-news"></span></a>
+                    </el-button-group>
+                </div>
+                <script type="text/javascript"  src="{% static 'js/form/five.js'%}"></script>
+                <div id="pagination">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th style="width: 70px"><div class="text"><a href="">序号</a></div></th>
+                                <th><div class="text"><a href="">发送人</a></div></th>
+                                <th><div class="text"><a href="">发送单位</a></div></th>
+                                <th><div class="text"><a href="">表单名称</a></div></th>
+                                <th><div class="text"><a href="">文件名</a></div></th>
+                                <th><div class="text"><a href="">发送时间</a></div></th>
+                                <th><div class="text"><a href="">接收单位</a></div></th>
+                                <th style="width: 40px"><div class="text"><a href="">接收状态</a></div></th>
+                                <th style="width: 200px"><div class="text"><a href="">文件下载</a></div></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for item in submit_list %}
+                            <tr class="{% cycle 'row1' 'row2' %}">
+                                <td class="field-serial">{{ forloop.counter }}</td>
+                                <td class="field-upload-user nowrap">{{ item.upload_user }}</td>
+                                <td class="field-upload-unit">{{ item.upload_unit }}</td>
+                                <td class="field-form-name">{{ item.form_name.name }}</td>
+                                <td class="field-file-name">{{ item.name }}</td>
+                                <td class="field-created-at nowrap">{{ item.created_at }}</td>
+                                <td class="field-download-unit">{{ item.download_unit.name }}</td>
+                                <td class="field-state">
+                                    {% if item.status == 1 %}
+                                        <img src="/static/img/icon-yes.svg" alt="True">
+                                    {% elif item.status == 0 %}
+                                        <img src="/static/img/icon-no.svg" alt="False">
+                                    {% endif %}
+                                </td>
+                                <td class="field-download-file">
+                                    <button type="button"
+                                            {% if not permission %}
+                                            class="el-button el-button--info el-button--small"
+                                            disabled title="暂无权限">
+                                            {% else %}
+                                            class="el-button el-button--default el-button--small download-button" data-download-link="/media/{{ item.url }}">
+                                            {% endif %}
+                                        <span class="fas fa-download">下载</span>
+                                    </button>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+
+                    <!-- 显示分页导航 -->
+                    {% include 'include/pagination.html' %}
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(".object-tools").hide().find('li a').each(function () {
+            _action.exts.push({
+                name: $(this).text(),
+                url: $(this).attr('href')
+            })
+        })
+        if(parent.addEvent){
+            parent.addEvent('title','uploaded files')
+        }
+    </script>
+
+    <br class="clear"/>
+</div>
+    <!-- END Content -->
+    {% block footer %}
+    <div id="footer"></div>
+    {% endblock %}
+    </div>
+<!-- END Container -->
+
+</body>
+</html>
