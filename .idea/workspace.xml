@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67492e67-292c-40ad-97e9-3e1cce1a2a54" name="更改" comment="新增项目配置文件及应用配置，设置Django项目基本参数。">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+    <list default="true" id="67492e67-292c-40ad-97e9-3e1cce1a2a54" name="更改" comment="Generating...">
+      <change beforePath="$PROJECT_DIR$/.idea/Office_system.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Office_system.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/统一表单系统.md" beforeDir="false" afterPath="$PROJECT_DIR$/READEME.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +25,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Lsheng0-0"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Lsheng0-0/Office-system.git",
+    "accountId": "c9c6b53c-d190-4c43-a87a-447f4fe155f8"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -97,6 +110,7 @@
       <workItem from="1713159711666" duration="447000" />
       <workItem from="1713160212036" duration="538000" />
       <workItem from="1713160791610" duration="146000" />
+      <workItem from="1713161240509" duration="1119000" />
     </task>
     <task id="LOCAL-00001" summary="新增项目配置文件及应用配置，设置Django项目基本参数。">
       <option name="closed" value="true" />
@@ -114,7 +128,23 @@
       <option name="project" value="LOCAL" />
       <updated>1713160578929</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="新增项目配置文件及应用配置，设置Django项目基本参数。">
+      <option name="closed" value="true" />
+      <created>1713161482487</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1713161482487</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Generating...">
+      <option name="closed" value="true" />
+      <created>1713161532557</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1713161532557</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,15 +170,17 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="SHOW_DETAILS_IN_CHANGES" value="false" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Generating..." />
     <MESSAGE value="新增项目配置文件及应用配置，设置Django项目基本参数。" />
-    <option name="LAST_COMMIT_MESSAGE" value="新增项目配置文件及应用配置，设置Django项目基本参数。" />
+    <MESSAGE value="Generating..." />
+    <option name="LAST_COMMIT_MESSAGE" value="Generating..." />
   </component>
 </project>
