@@ -1,0 +1,229 @@
+<changelist name="更改1" date="1713160124862" recycled="false">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/更改1/shelved.patch" />
+  <option name="DESCRIPTION" value="更改" />
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="static/admin/img/favicon.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/更改1/favicon.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="static/admin/img/logo.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/更改1/logo.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="static/admin/simpleui-x/elementui/theme-chalk/fonts/element-icons.ttf" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/更改1/element-icons.ttf" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="static/admin/simpleui-x/elementui/theme-chalk/fonts/element-icons.woff" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/更改1/element-icons.woff" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="static/admin/simpleui-x/fontawesome-free-5.8.1-web/webfonts/fa-brands-400.eot" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/更改1/fa-brands-400.eot" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="static/admin/simpleui-x/fontawesome-free-5.8.1-web/webfonts/fa-brands-400.ttf" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/更改1/fa-brands-400.ttf" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="static/admin/simpleui-x/fontawesome-free-5.8.1-web/webfonts/fa-brands-400.woff" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/更改1/fa-brands-400.woff" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="static/admin/simpleui-x/fontawesome-free-5.8.1-web/webfonts/fa-brands-400.woff2" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/更改1/fa-brands-400.woff2" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="static/admin/simpleui-x/fontawesome-free-5.8.1-web/webfonts/fa-regular-400.eot" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/更改1/fa-regular-400.eot" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="static/admin/simpleui-x/fontawesome-free-5.8.1-web/webfonts/fa-regular-400.ttf" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/更改1/fa-regular-400.ttf" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="static/admin/simpleui-x/fontawesome-free-5.8.1-web/webfonts/fa-regular-400.woff" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/更改1/fa-regular-400.woff" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="static/admin/simpleui-x/fontawesome-free-5.8.1-web/webfonts/fa-regular-400.woff2" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/更改1/fa-regular-400.woff2" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="static/admin/simpleui-x/fontawesome-free-5.8.1-web/webfonts/fa-solid-900.eot" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/更改1/fa-solid-900.eot" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="static/admin/simpleui-x/fontawesome-free-5.8.1-web/webfonts/fa-solid-900.ttf" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/更改1/fa-solid-900.ttf" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="static/admin/simpleui-x/fontawesome-free-5.8.1-web/webfonts/fa-solid-900.woff" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/更改1/fa-solid-900.woff" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="static/admin/simpleui-x/fontawesome-free-5.8.1-web/webfonts/fa-solid-900.woff2" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/更改1/fa-solid-900.woff2" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="static/admin/simpleui-x/fontawesome-free-6.2.0-web/webfonts/fa-brands-400.ttf" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/更改1/fa-brands-4001.ttf" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="static/admin/simpleui-x/fontawesome-free-6.2.0-web/webfonts/fa-brands-400.woff2" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/更改1/fa-brands-4001.woff2" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="static/admin/simpleui-x/fontawesome-free-6.2.0-web/webfonts/fa-regular-400.ttf" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/更改1/fa-regular-4001.ttf" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="static/admin/simpleui-x/fontawesome-free-6.2.0-web/webfonts/fa-regular-400.woff2" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/更改1/fa-regular-4001.woff2" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="static/admin/simpleui-x/fontawesome-free-6.2.0-web/webfonts/fa-solid-900.ttf" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/更改1/fa-solid-9001.ttf" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="static/admin/simpleui-x/fontawesome-free-6.2.0-web/webfonts/fa-solid-900.woff2" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/更改1/fa-solid-9001.woff2" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="static/admin/simpleui-x/fontawesome-free-6.2.0-web/webfonts/fa-v4compatibility.ttf" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/更改1/fa-v4compatibility.ttf" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="static/admin/simpleui-x/fontawesome-free-6.2.0-web/webfonts/fa-v4compatibility.woff2" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/更改1/fa-v4compatibility.woff2" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="static/admin/simpleui-x/img/favicon.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/更改1/favicon1.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="static/admin/simpleui-x/img/favicon_2.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/更改1/favicon_2.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="static/admin/simpleui-x/img/logo.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/更改1/logo1.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="static/admin/simpleui-x/img/logo.psd" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/更改1/logo.psd" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="static/admin/simpleui-x/img/logo_2.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/更改1/logo_2.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="static/image/logo.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/更改1/logo2.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="static/img/favicon.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/更改1/favicon2.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="static/img/logo.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/更改1/logo3.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="static/img/navbar-bg.b4f50da.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/更改1/navbar-bg.b4f50da.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="static/rest_framework/docs/img/favicon.ico" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/更改1/favicon.ico" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="static/rest_framework/docs/img/grid.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/更改1/grid.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="static/rest_framework/fonts/fontawesome-webfont.eot" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/更改1/fontawesome-webfont.eot" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="static/rest_framework/fonts/fontawesome-webfont.ttf" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/更改1/fontawesome-webfont.ttf" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="static/rest_framework/fonts/fontawesome-webfont.woff" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/更改1/fontawesome-webfont.woff" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="static/rest_framework/fonts/glyphicons-halflings-regular.eot" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/更改1/glyphicons-halflings-regular.eot" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="static/rest_framework/fonts/glyphicons-halflings-regular.ttf" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/更改1/glyphicons-halflings-regular.ttf" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="static/rest_framework/fonts/glyphicons-halflings-regular.woff" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/更改1/glyphicons-halflings-regular.woff" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="static/rest_framework/fonts/glyphicons-halflings-regular.woff2" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/更改1/glyphicons-halflings-regular.woff2" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="static/rest_framework/img/glyphicons-halflings.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/更改1/glyphicons-halflings.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="static/rest_framework/img/glyphicons-halflings-white.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/更改1/glyphicons-halflings-white.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="static/rest_framework/img/grid.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/更改1/grid1.png" />
+  </binary>
+</changelist>

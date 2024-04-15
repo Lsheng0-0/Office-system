@@ -1,0 +1,113 @@
+2023-11-21 20:27:24.442857: wfastcgi.py 3.0.0 started
+2023-11-21 20:27:24.442857: Python version: 3.11.4 (tags/v3.11.4:d2340ef, Jun  7 2023, 05:45:37) [MSC v.1934 64 bit (AMD64)]
+2023-11-21 20:27:24.442857: wfastcgi.py 3.0.0 initializing
+2023-11-21 20:27:25.052249: wfastcgi.py will restart when files in C:\inetpub\wwwroot\Personnel_handling\ are changed: .*((\.py)|(\.config))$
+2023-11-21 20:27:25.052249: wfastcgi.py 3.0.0 initialized
+2023-11-21 20:29:51.349088: wfastcgi.py 3.0.0 started
+2023-11-21 20:29:51.349088: Python version: 3.11.4 (tags/v3.11.4:d2340ef, Jun  7 2023, 05:45:37) [MSC v.1934 64 bit (AMD64)]
+2023-11-21 20:29:51.349088: wfastcgi.py 3.0.0 initializing
+2023-11-21 20:29:51.942845: wfastcgi.py will restart when files in C:\inetpub\wwwroot\Personnel_handling\ are changed: .*((\.py)|(\.config))$
+2023-11-21 20:29:51.942845: wfastcgi.py 3.0.0 initialized
+2023-11-21 20:59:12.505382: wfastcgi.py 3.0.0 started
+2023-11-21 20:59:12.505382: Python version: 3.11.4 (tags/v3.11.4:d2340ef, Jun  7 2023, 05:45:37) [MSC v.1934 64 bit (AMD64)]
+2023-11-21 20:59:12.505382: wfastcgi.py 3.0.0 initializing
+2023-11-21 20:59:13.114725: wfastcgi.py will restart when files in C:\inetpub\wwwroot\Personnel_handling\ are changed: .*((\.py)|(\.config))$
+2023-11-21 20:59:13.114725: wfastcgi.py 3.0.0 initialized
+2023-11-21 21:24:00.396947: wfastcgi.py 3.0.0 started
+2023-11-21 21:24:00.396947: Python version: 3.11.4 (tags/v3.11.4:d2340ef, Jun  7 2023, 05:45:37) [MSC v.1934 64 bit (AMD64)]
+2023-11-21 21:24:00.396947: wfastcgi.py 3.0.0 initializing
+2023-11-21 21:24:01.006333: wfastcgi.py will restart when files in C:\inetpub\wwwroot\Personnel_handling\ are changed: .*((\.py)|(\.config))$
+2023-11-21 21:24:01.006333: wfastcgi.py 3.0.0 initialized
+2023-11-21 21:31:05.411619: wfastcgi.py 3.0.0 started
+2023-11-21 21:31:05.411619: Python version: 3.11.4 (tags/v3.11.4:d2340ef, Jun  7 2023, 05:45:37) [MSC v.1934 64 bit (AMD64)]
+2023-11-21 21:31:05.411619: wfastcgi.py 3.0.0 initializing
+2023-11-21 21:31:06.005353: wfastcgi.py will restart when files in C:\inetpub\wwwroot\Personnel_handling\ are changed: .*((\.py)|(\.config))$
+2023-11-21 21:31:06.005353: wfastcgi.py 3.0.0 initialized
+2023-11-21 21:33:00.814895: wfastcgi.py exiting because Personnel_handling\urls.py has changed, matching .*((\.py)|(\.config))$
+2023-11-21 21:33:00.814895: Running on_exit tasks
+2023-11-22 09:24:40.612767: wfastcgi.py 3.0.0 started
+2023-11-22 09:24:40.612767: Python version: 3.11.4 (tags/v3.11.4:d2340ef, Jun  7 2023, 05:45:37) [MSC v.1934 64 bit (AMD64)]
+2023-11-22 09:24:40.612767: wfastcgi.py 3.0.0 initializing
+2023-11-22 09:24:41.253386: wfastcgi.py will restart when files in C:\inetpub\wwwroot\Personnel_handling\ are changed: .*((\.py)|(\.config))$
+2023-11-22 09:24:41.253386: wfastcgi.py 3.0.0 initialized
+2023-11-22 09:31:35.254454: wfastcgi.py 3.0.0 started
+2023-11-22 09:31:35.254454: Python version: 3.11.4 (tags/v3.11.4:d2340ef, Jun  7 2023, 05:45:37) [MSC v.1934 64 bit (AMD64)]
+2023-11-22 09:31:35.254454: wfastcgi.py 3.0.0 initializing
+2023-11-22 09:31:35.894989: wfastcgi.py will restart when files in C:\inetpub\wwwroot\Personnel_handling\ are changed: .*((\.py)|(\.config))$
+2023-11-22 09:31:35.894989: wfastcgi.py 3.0.0 initialized
+2023-11-22 09:37:28.254382: wfastcgi.py exiting because Personnel_handling\settings.py has changed, matching .*((\.py)|(\.config))$
+2023-11-22 09:37:28.254382: Running on_exit tasks
+2023-11-22 09:39:29.815898: wfastcgi.py 3.0.0 started
+2023-11-22 09:39:29.815898: Python version: 3.11.4 (tags/v3.11.4:d2340ef, Jun  7 2023, 05:45:37) [MSC v.1934 64 bit (AMD64)]
+2023-11-22 09:39:29.815898: wfastcgi.py 3.0.0 initializing
+2023-11-22 09:39:30.456524: wfastcgi.py will restart when files in C:\inetpub\wwwroot\Personnel_handling\ are changed: .*((\.py)|(\.config))$
+2023-11-22 09:39:30.456524: wfastcgi.py 3.0.0 initialized
+2023-11-22 09:44:45.319838: wfastcgi.py exiting because app01\admin.py has changed, matching .*((\.py)|(\.config))$
+2023-11-22 09:44:45.319838: Running on_exit tasks
+2023-11-22 09:47:42.394994: wfastcgi.py 3.0.0 started
+2023-11-22 09:47:42.394994: Python version: 3.11.4 (tags/v3.11.4:d2340ef, Jun  7 2023, 05:45:37) [MSC v.1934 64 bit (AMD64)]
+2023-11-22 09:47:42.394994: wfastcgi.py 3.0.0 initializing
+2023-11-22 09:47:43.019980: wfastcgi.py will restart when files in C:\inetpub\wwwroot\Personnel_handling\ are changed: .*((\.py)|(\.config))$
+2023-11-22 09:47:43.019980: wfastcgi.py 3.0.0 initialized
+2023-11-22 09:48:39.890114: wfastcgi.py exiting because app01\admin.py has changed, matching .*((\.py)|(\.config))$
+2023-11-22 09:48:39.890114: Running on_exit tasks
+2023-11-22 09:53:57.270019: wfastcgi.py 3.0.0 started
+2023-11-22 09:53:57.270019: Python version: 3.11.4 (tags/v3.11.4:d2340ef, Jun  7 2023, 05:45:37) [MSC v.1934 64 bit (AMD64)]
+2023-11-22 09:53:57.270019: wfastcgi.py 3.0.0 initializing
+2023-11-22 09:53:57.895025: wfastcgi.py will restart when files in C:\inetpub\wwwroot\Personnel_handling\ are changed: .*((\.py)|(\.config))$
+2023-11-22 09:53:57.895025: wfastcgi.py 3.0.0 initialized
+2023-11-22 10:30:06.285637: wfastcgi.py 3.0.0 started
+2023-11-22 10:30:06.285637: Python version: 3.11.4 (tags/v3.11.4:d2340ef, Jun  7 2023, 05:45:37) [MSC v.1934 64 bit (AMD64)]
+2023-11-22 10:30:06.285637: wfastcgi.py 3.0.0 initializing
+2023-11-22 10:30:06.926246: wfastcgi.py will restart when files in C:\inetpub\wwwroot\Personnel_handling\ are changed: .*((\.py)|(\.config))$
+2023-11-22 10:30:06.926246: wfastcgi.py 3.0.0 initialized
+2023-11-22 11:06:26.801255: wfastcgi.py 3.0.0 started
+2023-11-22 11:06:26.801255: Python version: 3.11.4 (tags/v3.11.4:d2340ef, Jun  7 2023, 05:45:37) [MSC v.1934 64 bit (AMD64)]
+2023-11-22 11:06:26.801255: wfastcgi.py 3.0.0 initializing
+2023-11-22 11:06:27.441862: wfastcgi.py will restart when files in C:\inetpub\wwwroot\Personnel_handling\ are changed: .*((\.py)|(\.config))$
+2023-11-22 11:06:27.441862: wfastcgi.py 3.0.0 initialized
+2023-11-22 11:26:30.957505: wfastcgi.py 3.0.0 started
+2023-11-22 11:26:30.957505: Python version: 3.11.4 (tags/v3.11.4:d2340ef, Jun  7 2023, 05:45:37) [MSC v.1934 64 bit (AMD64)]
+2023-11-22 11:26:30.957505: wfastcgi.py 3.0.0 initializing
+2023-11-22 11:26:31.582488: wfastcgi.py will restart when files in C:\inetpub\wwwroot\Personnel_handling\ are changed: .*((\.py)|(\.config))$
+2023-11-22 11:26:31.582488: wfastcgi.py 3.0.0 initialized
+2023-11-22 15:14:38.535624: wfastcgi.py 3.0.0 started
+2023-11-22 15:14:38.535624: Python version: 3.11.4 (tags/v3.11.4:d2340ef, Jun  7 2023, 05:45:37) [MSC v.1934 64 bit (AMD64)]
+2023-11-22 15:14:38.535624: wfastcgi.py 3.0.0 initializing
+2023-11-22 15:14:39.191859: wfastcgi.py will restart when files in C:\inetpub\wwwroot\Personnel_handling\ are changed: .*((\.py)|(\.config))$
+2023-11-22 15:14:39.191859: wfastcgi.py 3.0.0 initialized
+2023-11-22 16:07:33.051251: wfastcgi.py 3.0.0 started
+2023-11-22 16:07:33.051251: Python version: 3.11.4 (tags/v3.11.4:d2340ef, Jun  7 2023, 05:45:37) [MSC v.1934 64 bit (AMD64)]
+2023-11-22 16:07:33.051251: wfastcgi.py 3.0.0 initializing
+2023-11-22 16:07:33.691859: wfastcgi.py will restart when files in C:\inetpub\wwwroot\Personnel_handling\ are changed: .*((\.py)|(\.config))$
+2023-11-22 16:07:33.691859: wfastcgi.py 3.0.0 initialized
+2023-11-23 09:50:09.254431: wfastcgi.py 3.0.0 started
+2023-11-23 09:50:09.254431: Python version: 3.11.4 (tags/v3.11.4:d2340ef, Jun  7 2023, 05:45:37) [MSC v.1934 64 bit (AMD64)]
+2023-11-23 09:50:09.254431: wfastcgi.py 3.0.0 initializing
+2023-11-23 09:50:09.879364: wfastcgi.py will restart when files in C:\inetpub\wwwroot\Personnel_handling\ are changed: .*((\.py)|(\.config))$
+2023-11-23 09:50:09.879364: wfastcgi.py 3.0.0 initialized
+2023-11-24 09:32:19.785613: wfastcgi.py 3.0.0 started
+2023-11-24 09:32:19.785613: Python version: 3.11.4 (tags/v3.11.4:d2340ef, Jun  7 2023, 05:45:37) [MSC v.1934 64 bit (AMD64)]
+2023-11-24 09:32:19.785613: wfastcgi.py 3.0.0 initializing
+2023-11-24 09:32:20.394988: wfastcgi.py will restart when files in C:\inetpub\wwwroot\Personnel_handling\ are changed: .*((\.py)|(\.config))$
+2023-11-24 09:32:20.394988: wfastcgi.py 3.0.0 initialized
+2023-11-24 09:39:35.301246: wfastcgi.py 3.0.0 started
+2023-11-24 09:39:35.301246: Python version: 3.11.4 (tags/v3.11.4:d2340ef, Jun  7 2023, 05:45:37) [MSC v.1934 64 bit (AMD64)]
+2023-11-24 09:39:35.301246: wfastcgi.py 3.0.0 initializing
+2023-11-24 09:39:35.910611: wfastcgi.py will restart when files in C:\inetpub\wwwroot\Personnel_handling\ are changed: .*((\.py)|(\.config))$
+2023-11-24 09:39:35.910611: wfastcgi.py 3.0.0 initialized
+2023-11-24 09:58:42.363741: wfastcgi.py 3.0.0 started
+2023-11-24 09:58:42.363741: Python version: 3.11.4 (tags/v3.11.4:d2340ef, Jun  7 2023, 05:45:37) [MSC v.1934 64 bit (AMD64)]
+2023-11-24 09:58:42.363741: wfastcgi.py 3.0.0 initializing
+2023-11-24 09:58:43.004383: wfastcgi.py will restart when files in C:\inetpub\wwwroot\Personnel_handling\ are changed: .*((\.py)|(\.config))$
+2023-11-24 09:58:43.004383: wfastcgi.py 3.0.0 initialized
+2023-11-24 11:29:37.145003: wfastcgi.py 3.0.0 started
+2023-11-24 11:29:37.145003: Python version: 3.11.4 (tags/v3.11.4:d2340ef, Jun  7 2023, 05:45:37) [MSC v.1934 64 bit (AMD64)]
+2023-11-24 11:29:37.145003: wfastcgi.py 3.0.0 initializing
+2023-11-24 11:29:37.754368: wfastcgi.py will restart when files in C:\inetpub\wwwroot\Personnel_handling\ are changed: .*((\.py)|(\.config))$
+2023-11-24 11:29:37.754368: wfastcgi.py 3.0.0 initialized
+2023-11-24 14:46:16.348112: wfastcgi.py 3.0.0 started
+2023-11-24 14:46:16.348112: Python version: 3.11.4 (tags/v3.11.4:d2340ef, Jun  7 2023, 05:45:37) [MSC v.1934 64 bit (AMD64)]
+2023-11-24 14:46:16.348112: wfastcgi.py 3.0.0 initializing
+2023-11-24 14:46:16.941866: wfastcgi.py will restart when files in C:\inetpub\wwwroot\Personnel_handling\ are changed: .*((\.py)|(\.config))$
+2023-11-24 14:46:16.957488: wfastcgi.py 3.0.0 initialized
